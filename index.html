@@ -3,26 +3,49 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto CRUD - Git Flow</title>
+    <title>Proyecto CRUD - Git Flow Completo</title>
     <style>
-        body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; }
-        .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
+        body { font-family: Arial, sans-serif; margin: 30px; background-color: #f4f4f9; }
+        .container { max-width: 700px; margin: auto; background: white; padding: 25px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
         h1, h2 { color: #333; text-align: center; }
-        .dashboard { margin-top: 20px; padding: 15px; background: #e9ecef; border-radius: 5px; }
+        form { display: flex; flex-direction: column; gap: 10px; margin-bottom: 20px; }
+        input, button { padding: 10px; font-size: 16px; border: 1px solid #ccc; border-radius: 4px; }
+        button { background-color: #28a745; color: white; border: none; cursor: pointer; }
+        button:hover { background-color: #218838; }
+        table { width: 100%; border-collapse: collapse; margin-top: 20px; }
+        th, td { border: 1px solid #ddd; padding: 10px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        .actions button { padding: 5px 10px; font-size: 14px; margin-right: 5px; }
+        .btn-delete { background-color: #dc3545; }
+        .btn-delete:hover { background-color: #c82333; }
+        .btn-edit { background-color: #ffc107; color: black; }
+        .btn-edit:hover { background-color: e0a800; }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Sistema CRUD</h1>
-        <div id="login-section">
-            <h3>Bienvenido al sistema</h3>
-            <p>Por favor, ingrese sus datos para continuar.</p>
-        </div>
-        <div class="dashboard" id="user-dashboard">
-            <h2>Panel de Usuario (Dashboard)</h2>
-            <p>Aquí se visualizarán y administrarán los registros del sistema.</p>
-        </div>
+        <h1>Sistema CRUD Funcional</h1>
+        
+        <form id="crud-form">
+            <input type="hidden" id="item-id">
+            <input type="text" id="item-name" placeholder="Nombre del registro..." required>
+            <button type="submit" id="btn-submit">Guardar Registro</button>
+        </form>
+
+        <h2>Registros Existentes</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nombre</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="item-list">
+            </tbody>
+        </table>
     </div>
+
     <script src="app.js"></script>
 </body>
 </html>

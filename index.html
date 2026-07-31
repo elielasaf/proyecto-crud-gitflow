@@ -7,7 +7,8 @@
     <style>
         body { font-family: Arial, sans-serif; margin: 40px; background-color: #f4f4f9; }
         .container { max-width: 600px; margin: auto; background: white; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); }
-        h1 { color: #333; text-align: center; }
+        h1, h2 { color: #333; text-align: center; }
+        .dashboard { margin-top: 20px; padding: 15px; background: #e9ecef; border-radius: 5px; }
     </style>
 </head>
 <body>
@@ -16,6 +17,10 @@
         <div id="login-section">
             <h3>Bienvenido al sistema</h3>
             <p>Por favor, ingrese sus datos para continuar.</p>
+        </div>
+        <div class="dashboard" id="user-dashboard">
+            <h2>Panel de Usuario (Dashboard)</h2>
+            <p>Aquí se visualizarán y administrarán los registros del sistema.</p>
         </div>
     </div>
     <script src="app.js"></script>
